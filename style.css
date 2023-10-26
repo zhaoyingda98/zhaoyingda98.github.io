@@ -48,7 +48,6 @@ button:hover {
 }
 
 #result {
-  display: none; /* 默认隐藏 */
   width: 70%;
   margin-top: 20px;
   padding: 20px;
