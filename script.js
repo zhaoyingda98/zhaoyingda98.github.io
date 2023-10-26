@@ -39,5 +39,5 @@ async function search() {
   }
   tableHTML += '</table>';
 
-  document.getElementById('result').innerHTML = tableHTML;
+  document.getElementById('result').style.display = 'block';
 }
