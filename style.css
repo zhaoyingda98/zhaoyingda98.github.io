@@ -70,6 +70,7 @@ th {
   color: #333;
   padding: 8px;
   border: 1px solid #ccc;
+  white-space: nowrap
 }
 
 /* 表格单元格样式 */
