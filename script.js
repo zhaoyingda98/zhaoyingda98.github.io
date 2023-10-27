@@ -53,3 +53,10 @@ async function search() {
 
   document.getElementById('result').innerHTML = tableHTML;
 }
+// 监听输入框的键盘事件
+document.getElementById('inputWord').addEventListener('keydown', function(event) {
+  if (event.key === 'Enter') {
+    event.preventDefault(); // 阻止默认的Enter键行为
+    search(); // 调用search函数
+  }
+});
