@@ -25,7 +25,7 @@ async function search() {
   }
 
   // 在字典中查找每个异体字的释义，并在表格中显示结果
-  let tableHTML = '<table border="1"><tr><th>字</th><th>書名</th><th>部件</th><th>注文</th><th>備註</th></tr>';
+  let tableHTML = '<table><tr><th>字</th><th>書名</th><th>部件</th><th>注文</th><th>備註</th></tr>';
   const results = [];
   for (const variant of variantGroup) {
     const entries = dictionary.filter(entry => entry.字.includes(variant));
@@ -33,9 +33,21 @@ async function search() {
       // 如果结果中已经有相同的记录，则跳过
       if (!results.some(result => JSON.stringify(result) === JSON.stringify(entry))) {
         results.push(entry);
-        tableHTML += `<tr><td>${entry.字}</td><td>${entry.書名}</td><td>${entry.部件}</td><td>${entry.注文}</td><td>${entry.備註}</td></tr>`;
       }
     }
+  }
+
+  // 对结果按照书名优先级排序
+  const order = ['名義', '字鏡', '廣雅', '經典釋文'];
+  results.sort((a, b) => {
+    const indexA = order.indexOf(a.書名);
+    const indexB = order.indexOf(b.書名);
+    return (indexA === -1 ? order.length : indexA) - (indexB === -1 ? order.length : indexB);
+  });
+
+  // 将排序后的结果添加到表格
+  for (const entry of results) {
+    tableHTML += `<tr><td>${entry.字}</td><td>${entry.書名}</td><td>${entry.部件}</td><td>${entry.注文}</td><td>${entry.備註}</td></tr>`;
   }
   tableHTML += '</table>';
 
