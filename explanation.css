@@ -1,0 +1,88 @@
+/* explanation.css - Modern Article Style */
+
+/* 添加一些基本的HTML元素样式重置 */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* 应用全局字体和背景颜色 */
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-size: 18px; /* 较大的基本字体大小 */
+  background-color: #fafafa; /* 淡色背景 */
+  color: #333; /* 深色文字，提高对比度 */
+  padding: 1em; /* 避免内容紧贴浏览器边缘 */
+}
+
+/* 优化标题的样式 */
+h1 {
+  font-size: 2.5em; /* 更大的标题字体 */
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-align: center; /* 标题居中 */
+  color: #333; /* 标题颜色 */
+}
+
+/* 段落样式 */
+p {
+  margin-bottom: 1em; /* 段落之间适当的间距 */
+  color: #555; /* 文字颜色略淡，减少眼睛疲劳 */
+}
+
+/* 按钮样式 */
+button,
+a.button-style { /* 添加了一个类选择器，以便可以将类应用于链接 */
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  text-decoration: none; /* 确保链接看起来像按钮，没有下划线 */
+}
+
+button:hover,
+a.button-style:hover { /* 应用相同的悬浮效果给链接和按钮 */
+  background-color: #0056b3;
+}
+
+
+/* 优化列表样式 */
+ol,
+ul {
+  padding-left: 20px; /* 列表内边距 */
+  margin-bottom: 1em; /* 列表下的间距 */
+}
+
+li {
+  margin-bottom: 0.5em; /* 列表项之间的间距 */
+}
+
+/* 设置内容区域的样式 */
+.content {
+  max-width: 800px; /* 最大宽度限制阅读区域 */
+  margin: 0 auto; /* 内容居中显示 */
+  background-color: #fff; /* 内容背景为白色 */
+  padding: 2em; /* 内容区域的内边距 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 给内容添加一个轻微的阴影，增加层次感 */
+  border-radius: 10px; /* 边角圆润 */
+}
+
+/* 媒体查询，用于响应式设计 */
+@media (max-width: 768px) {
+  .content {
+    padding: 1em; /* 在较小屏幕上减少内边距 */
+  }
+
+  body {
+    font-size: 16px; /* 在较小屏幕上减小字体大小 */
+  }
+}
+/* explanation.css */
+
+/* 其他样式 */

@@ -7,16 +7,26 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="header">
-    <a href="explanation.html" class="explanation-button">説明</a>
+  <div class="wrapper">
+    <header class="header">
+      <h1 class="site-title">字韻書查詢</h1> 
+      <div class="search-box">
+        <input type="text" id="inputWord" placeholder="請輸入一個字">
+        <button onclick="search()">查詢</button>
+        <!-- 新增的“说明”按钮 -->
+        <button onclick="window.location.href='explanation.html'">説明</button>
+      </div>
+    </header>
+    <main class="content">
+      <!-- 为每本书创建一个独立的表格容器 -->
+      <div id="result-名義" class="book-results"></div>
+      <div id="result-字鏡" class="book-results"></div>
+      <div id="result-類抄" class="book-results"></div>
+      <div id="result-廣雅" class="book-results"></div>
+      <div id="result-經典釋文" class="book-results"></div>
+      <!-- 如果还有第六本书，请添加相应的div -->
+    </main>
   </div>
-  <div class="container">
-    <h1>字韻書查詢</h1>
-    <input type="text" id="inputWord" placeholder="請輸入一個字">
-    <button onclick="search()">查詢</button>
-    <div id="result" class="result"></div>
-  </div>
-
   <script src="script.js"></script>
 </body>
 </html>
