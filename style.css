@@ -34,9 +34,12 @@ body {
 /* 网站标题样式 */
 .site-title {
   font-size: 2em;
-  position: fixed; /* 固定定位，使其不随滚动条移动 */
+  margin-left: 15px;     /* 左边距为20px，保持一点距离屏幕边缘 */
+  margin-right: 128px;    /* 右边距为20px，与输入框之间的空白 */
   left: 20px;
   top: 10px;
+  display: inline-block;  /* 使标题以内联块状元素显示 */
+  vertical-align: top;    /* 垂直对齐方式设为顶部对齐 */
 }
 
 /* 搜索框样式 */
