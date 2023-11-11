@@ -35,7 +35,7 @@ body {
 .site-title {
   font-size: 2em;
   margin-left: 15px;     /* 左边距为15px，保持一点距离屏幕边缘 */
-  margin-right: 128px;    /* 右边距为128px，与输入框之间的空白 */
+  margin-right: 15px;    /* 右边距为15px，与输入框之间的空白 */
   left: 20px;
   top: 10px;
   display: inline-block;  /* 使标题以内联块状元素显示 */
